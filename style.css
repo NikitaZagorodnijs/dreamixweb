@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #565555;
+}
+
+header {
+    background-image: url(images/pexels-luis-gomes-166706-546819.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+    font-size: large;
+    text-shadow: 0px 0px 5px black;
+}
+
+
+/* Navigation Bar with Live Animated Gradient Background */
+nav {
+    background: linear-gradient(-45deg, #68cbf2, #a45edd, #332dda, #a6c1ee, #e84966);
+    background-size: 400% 400%;
+    animation: navLiveGradient 8s infinite alternate;
+    padding: 0.7rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Links */
+nav a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes navLiveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+li{
+    list-style: none;
+}
+section {
+    padding: 2rem;
+    text-align: center;
+}
+.sectionsWrap{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+/* Pop-Up Form */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-form label {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
+
+.popup-form input, .popup-form select {
+    width: 100%;
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.popup-form button {
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-form button:hover {
+    background: #005bb5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    .ball2{
+        display: none;
+    }
+    .ball{
+        display: none;
+    }
+}
+
+#about{
+    width: 400px;
+}
+.aboutWrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    font-size: 1.3rem;
+}
+.backWrap{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.background{
+    width: 700px;
+    height: 650px;
+    box-shadow: 0px 0px 10px #d3d3d3;
+    position:absolute;
+    
+    background-color: #d3d3d3;
+    opacity: 50%;
+    z-index: -1;
+    border-radius: 20px;
+}
+.ball{
+    width: 300px;
+    height: 300px;
+    box-shadow:0px 0px 30px #ef9546;
+    border: 2px solid #e79d5c;
+    background-color: #e99851;
+    
+    border-radius: 50%;
+    position: absolute;
+    z-index: -2;
+    left: 10px;
+    top: 100px;
+    animation: ballAnimation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ballAnimation {
+    0%{left: 10px;top: 100px;}
+    25%{left: 1000px;top: 400px;}
+    50%{left: 1000px;top: 200px;}
+    75%{left: -500px;top: 400px;}
+    
+    
+}
+
+.ball2{
+    width: 200px;
+    height: 200px;
+    box-shadow:0px 0px 30px #3a66eb;
+    border: 2px solid #4670ef;
+    background-color: #4670ef;
+    right: 10px;
+    top: 100px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -2;
+    animation: ballAnimation2;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ballAnimation2 {
+    0%{right: 10px;top: 100px;}
+    25%{right: 1000px;top: 450px;}
+    50%{right: 1000px;top: 260px;}
+    75%{right: -500px;top: 340px;}
+    
+    
+}
